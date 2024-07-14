@@ -36,44 +36,11 @@ public class HammerItem extends SwordItem implements Vanishable{
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
-    private static final UUID ATTACK_DAMAGE_BONUS_MODIFIER_ID = UUID.randomUUID();
-    private static final UUID ATTACK_SPEED_BONUS_MODIFIER_ID = UUID.randomUUID();
-
-    private static final  EntityAttributeModifier ATTACK_DAMAGE_MODIFIER;
-    private static final  EntityAttributeModifier ATTACK_SPEED_MODIFIER;
-
     @Override
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
         return 1F;
     }
 
-    @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (selected) {
-            if (entity.isPlayer() && ((PlayerEntity) entity).getItemCooldownManager()
-                    .getCooldownProgress(((PlayerEntity) entity).getStackInHand(Hand.OFF_HAND).getItem(), (float)1.0) < 1) {
-                PlayerEntity user = ((PlayerEntity) entity);
-                user.getItemCooldownManager().set(user.getStackInHand(Hand.OFF_HAND).getItem(), 20);
-
-            }
-        }
-        PlayerEntity user = ((PlayerEntity) entity) ;
-        if (entity.isPlayer() && !world.isClient) {
-            Boolean conditions = user.getMainHandStack().getItem() instanceof HammerItem && !user.getOffHandStack().isEmpty();
-
-            if (conditions && !user.getAttributes().hasModifierForAttribute(EntityAttributes.GENERIC_ATTACK_DAMAGE, ATTACK_DAMAGE_BONUS_MODIFIER_ID)) {
-                EntityAttributeInstance entityAttackDamage = user.getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE);
-                EntityAttributeInstance entityAttackSpeed = user.getAttributeInstance(EntityAttributes.GENERIC_ATTACK_SPEED);
-                entityAttackSpeed.addTemporaryModifier(ATTACK_SPEED_MODIFIER);
-                entityAttackDamage.addTemporaryModifier(ATTACK_DAMAGE_MODIFIER);
-            } else if (user.getAttributes().hasModifierForAttribute(EntityAttributes.GENERIC_ATTACK_DAMAGE, ATTACK_DAMAGE_BONUS_MODIFIER_ID) && !conditions) {
-                user.getAttributeInstance(EntityAttributes.GENERIC_ATTACK_SPEED).removeModifier(ATTACK_SPEED_BONUS_MODIFIER_ID);
-                user.getAttributeInstance(EntityAttributes.GENERIC_ATTACK_DAMAGE).removeModifier(ATTACK_DAMAGE_BONUS_MODIFIER_ID);
-            }
-
-        }
-        super.inventoryTick(stack, world, entity, slot, selected);
-    }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
@@ -99,9 +66,8 @@ public class HammerItem extends SwordItem implements Vanishable{
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.literal("Slow but powerful weapon capable of breaking shields."));
+        tooltip.add(Text.literal("Slow but powerful two-handed weapon capable of breaking shields."));
         tooltip.add(Text.literal("Hold right click to charge up a powerful slam."));
-        tooltip.add(Text.literal("Weaker when offhand is filled."));
         super.appendTooltip(stack, world, tooltip, context);
     }
 
@@ -127,9 +93,5 @@ public class HammerItem extends SwordItem implements Vanishable{
         return super.finishUsing(stack, world, user);
     }
 
-    static {
-        ATTACK_DAMAGE_MODIFIER = new EntityAttributeModifier(ATTACK_DAMAGE_BONUS_MODIFIER_ID, "Dual wielding damage bonus", -2.0D, EntityAttributeModifier.Operation.ADDITION);
-        ATTACK_SPEED_MODIFIER = new EntityAttributeModifier(ATTACK_SPEED_BONUS_MODIFIER_ID, "Dual wielding attack speed bonus", -0.3D, EntityAttributeModifier.Operation.ADDITION);
-    }
 }
 

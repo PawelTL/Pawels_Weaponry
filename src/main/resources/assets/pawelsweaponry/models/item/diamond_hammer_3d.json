@@ -49,11 +49,11 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [5, -20, -15],
+			"rotation": [0, 0, 0],
 			"translation": [-0.25, -0.75, 0.5]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [0, -30, 0],
+			"rotation": [0, 0, 0],
 			"translation": [-0.25, -0.75, 0.5]
 		},
 		"firstperson_righthand": {

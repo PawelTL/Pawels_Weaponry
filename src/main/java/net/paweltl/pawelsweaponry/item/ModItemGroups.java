@@ -13,9 +13,9 @@ import net.paweltl.pawelsweaponry.block.ModBlocks;
 public class ModItemGroups {
 
     public static final ItemGroup DIAMOND_HAMMER_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(PawelsWeaponry.MOD_ID, "diamond_hammer"),
+            new Identifier(PawelsWeaponry.MOD_ID, "diamond_dagger"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.diamond_hammer"))
-                    .icon(() -> new ItemStack(ModItems.DIAMOND_HAMMER)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.DIAMOND_DAGGER)).entries((displayContext, entries) -> {
 
                         entries.add(ModItems.DIAMOND_HAMMER);
                         entries.add(ModItems.STONE_HAMMER);
@@ -31,13 +31,33 @@ public class ModItemGroups {
                         entries.add(ModItems.IRON_SPEAR);
                         entries.add(ModItems.NETHERITE_SPEAR);
 
+                        entries.add(ModItems.WOODEN_DUAL_BLADE);
+                        entries.add(ModItems.GOLD_DUAL_BLADE);
+                        entries.add(ModItems.STONE_DUAL_BLADE);
+                        entries.add(ModItems.IRON_DUAL_BLADE);
                         entries.add(ModItems.DIAMOND_DUAL_BLADE);
+                        entries.add(ModItems.NETHERITE_DUAL_BLADE);
 
+                        entries.add(ModItems.WOODEN_KATANA);
+                        entries.add(ModItems.GOLD_KATANA);
+                        entries.add(ModItems.STONE_KATANA);
+                        entries.add(ModItems.IRON_KATANA);
                         entries.add(ModItems.DIAMOND_KATANA);
+                        entries.add(ModItems.NETHERITE_KATANA);
 
+                        entries.add(ModItems.WOODEN_CLEAVER);
+                        entries.add(ModItems.GOLD_CLEAVER);
+                        entries.add(ModItems.STONE_CLEAVER);
+                        entries.add(ModItems.IRON_CLEAVER);
                         entries.add(ModItems.DIAMOND_CLEAVER);
+                        entries.add(ModItems.NETHERITE_CLEAVER);
 
-                        entries.add(ModItems.DIAMOND_BATTLE_AXE);
+                        entries.add(ModItems.WOODEN_BATTLEAXE);
+                        entries.add(ModItems.GOLD_BATTLEAXE);
+                        entries.add(ModItems.STONE_BATTLEAXE);
+                        entries.add(ModItems.IRON_BATTLEAXE);
+                        entries.add(ModItems.DIAMOND_BATTLEAXE);
+                        entries.add(ModItems.NETHERITE_BATTLEAXE);
 
                         entries.add(ModItems.WOODEN_DAGGER);
                         entries.add(ModItems.GOLD_DAGGER);
@@ -45,6 +65,14 @@ public class ModItemGroups {
                         entries.add(ModItems.IRON_DAGGER);
                         entries.add(ModItems.DIAMOND_DAGGER);
                         entries.add(ModItems.NETHERITE_DAGGER);
+
+                        entries.add(ModItems.WOODEN_LONGSWORD);
+                        entries.add(ModItems.GOLD_LONGSWORD);
+                        entries.add(ModItems.STONE_LONGSWORD);
+                        entries.add(ModItems.IRON_LONGSWORD);
+                        entries.add(ModItems.DIAMOND_LONGSWORD);
+                        entries.add(ModItems.NETHERITE_LONGSWORD);
+
 
 
                     }).build());

@@ -11,6 +11,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.MathHelper;
 import net.paweltl.pawelsweaponry.item.custom.DualBladeItem;
 import net.paweltl.pawelsweaponry.item.custom.HammerItem;
+import net.paweltl.pawelsweaponry.item.custom.LongSwordItem;
 import net.paweltl.pawelsweaponry.item.custom.SpearItem;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -52,7 +53,7 @@ public abstract class BipedEntityModelMixin<T extends LivingEntity> extends Anim
                 this.rightArm.pitch = (float) ((double) this.rightArm.pitch - ((double) hx * 0.1D + (double) ix * 0.15));
             }
         }
-        if ( livingEntity.getMainHandStack().getItem() instanceof HammerItem && livingEntity.getOffHandStack().isEmpty()) {
+        if (livingEntity.getMainHandStack().getItem() instanceof HammerItem && livingEntity.getOffHandStack().isEmpty()) {
             this.rightArm.pitch = -0.8727F + (MathHelper.cos(f * 0.6662F) * 2.0F * g * 0.5F / 15);
             this.rightArm.yaw = -0.5672F;
             this.rightArm.roll = 0.0F;
@@ -68,7 +69,7 @@ public abstract class BipedEntityModelMixin<T extends LivingEntity> extends Anim
                 }
                 float ix = MathHelper.sin(this.handSwingProgress * 3.1415927F) * -((kx) - 0.7F) * 0.75F * 0.6F;
                 this.rightArm.pitch = (float) ((double) this.rightArm.pitch - ((double) hx + (double) ix * 0.85D));
-                this.leftArm.pitch = (float) ((double) this.leftArm.pitch - ((double) hx  + (double) ix)) * 0.75F;
+                this.leftArm.pitch = (float) ((double) this.leftArm.pitch - ((double) hx + (double) ix)) * 0.75F;
             }
             if (livingEntity.isUsingItem()) {
                 this.leftArm.pitch = this.leftArm.pitch - 0.8f;
@@ -78,7 +79,31 @@ public abstract class BipedEntityModelMixin<T extends LivingEntity> extends Anim
 
             }
         }
+        if (livingEntity.getMainHandStack().getItem() instanceof LongSwordItem && livingEntity.getOffHandStack().isEmpty()) {
+            this.rightArm.pitch = -0.8727F + (MathHelper.cos(f * 0.6662F) * 2.0F * g * 0.5F / 15);
+            this.rightArm.yaw = -0.5672F;
+            this.rightArm.roll = 0.0F;
+            this.leftArm.pitch = -1.0472F + (MathHelper.cos(f * 0.6662F) * 2.0F * g * 0.5F / 15);
+            this.leftArm.yaw = 0.829F;
+            this.leftArm.roll = -0.0436F;
+            if (this.handSwingProgress > 0) {
+                float gx = 1.0F - this.handSwingProgress;
+                float hx = MathHelper.sin(gx * 3.1415927F);
+                float kx = this.head.pitch;
+                if (kx < 0) {
+                    kx = 0.25F;
+                }
+                float ix = MathHelper.sin(this.handSwingProgress * 3.1415927F) * -((kx) - 0.7F) * 0.75F * 0.6F;
+                this.rightArm.pitch = (float) ((double) this.rightArm.pitch - ((double) hx * 1.2D + (double) ix));
+                this.leftArm.pitch = (float) ((double) this.leftArm.pitch - ((double) hx * 1.2D + (double) ix) * 1.2D) * 0.75F;
+            }
 
+            if (livingEntity.isBlocking()) {
+                this.rightArm.pitch = -1.25F;
+                this.leftArm.pitch = -1.17F;
+                this.rightArm.roll = 0.7F;
+            }
+
+        }
     }
-
 }

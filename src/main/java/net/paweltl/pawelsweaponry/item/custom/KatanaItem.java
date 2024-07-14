@@ -36,7 +36,7 @@ public class KatanaItem  extends SwordItem {
 
     @Override
     public int getMaxUseTime(ItemStack stack) {
-        return 10;
+        return 8;
     }
 
     @Override
@@ -49,7 +49,7 @@ public class KatanaItem  extends SwordItem {
             targets.forEach((target) -> {
                 target.damage(world.getDamageSources().playerAttack(player), getAttackDamage() * 2 + 5);
             });
-            user.addVelocity(uservec.x * 4, 0, uservec.z * 4);
+            user.addVelocity(uservec.x * 5, 0, uservec.z * 5);
 
         }
         return super.finishUsing(stack, world, user);

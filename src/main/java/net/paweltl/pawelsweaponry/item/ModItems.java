@@ -38,17 +38,59 @@ public class ModItems {
     public static final Item NETHERITE_SPEAR = registerItem("netherite_spear",
             new SpearItem(ToolMaterials.NETHERITE, 4, -3.0f, new FabricItemSettings().maxCount(1).fireproof()));
 
+    public static final Item WOODEN_DUAL_BLADE = registerItem("wooden_dual_blade",
+            new DualBladeItem(ToolMaterials.WOOD, 3, -2.5f, new FabricItemSettings().maxCount(1)));
+    public static final Item GOLD_DUAL_BLADE = registerItem("gold_dual_blade",
+            new DualBladeItem(ToolMaterials.GOLD, 3, -2.5f, new FabricItemSettings().maxCount(1)));
+    public static final Item STONE_DUAL_BLADE = registerItem("stone_dual_blade",
+            new DualBladeItem(ToolMaterials.STONE, 3, -2.5f, new FabricItemSettings().maxCount(1)));
+    public static final Item IRON_DUAL_BLADE = registerItem("iron_dual_blade",
+            new DualBladeItem(ToolMaterials.IRON, 3, -2.5f, new FabricItemSettings().maxCount(1)));
     public static final Item DIAMOND_DUAL_BLADE = registerItem("diamond_dual_blade",
             new DualBladeItem(ToolMaterials.DIAMOND, 3, -2.5f, new FabricItemSettings().maxCount(1)));
+    public static final Item NETHERITE_DUAL_BLADE = registerItem("netherite_dual_blade",
+            new DualBladeItem(ToolMaterials.NETHERITE, 3, -2.5f, new FabricItemSettings().maxCount(1).fireproof()));
 
+    public static final Item WOODEN_KATANA = registerItem("wooden_katana",
+            new KatanaItem(ToolMaterials.WOOD, 5, -2.5f, new FabricItemSettings().maxCount(1)));
+    public static final Item GOLD_KATANA = registerItem("gold_katana",
+            new KatanaItem(ToolMaterials.GOLD, 5, -2.5f, new FabricItemSettings().maxCount(1)));
+    public static final Item STONE_KATANA = registerItem("stone_katana",
+            new KatanaItem(ToolMaterials.STONE, 5, -2.5f, new FabricItemSettings().maxCount(1)));
+    public static final Item IRON_KATANA = registerItem("iron_katana",
+            new KatanaItem(ToolMaterials.IRON, 5, -2.5f, new FabricItemSettings().maxCount(1)));
     public static final Item DIAMOND_KATANA = registerItem("diamond_katana",
             new KatanaItem(ToolMaterials.DIAMOND, 5, -2.5f, new FabricItemSettings().maxCount(1)));
+    public static final Item NETHERITE_KATANA = registerItem("netherite_katana",
+            new KatanaItem(ToolMaterials.NETHERITE, 5, -2.5f, new FabricItemSettings().maxCount(1).fireproof()));
 
+    public static final Item WOODEN_CLEAVER = registerItem("wooden_cleaver",
+            new CleaverItem(ToolMaterials.WOOD, 2, -2.8f, new FabricItemSettings().maxCount(1)));
+    public static final Item GOLD_CLEAVER = registerItem("gold_cleaver",
+            new CleaverItem(ToolMaterials.GOLD, 2, -2.8f, new FabricItemSettings().maxCount(1)));
+    public static final Item STONE_CLEAVER = registerItem("stone_cleaver",
+            new CleaverItem(ToolMaterials.STONE, 2, -2.8f, new FabricItemSettings().maxCount(1)));
+    public static final Item IRON_CLEAVER = registerItem("iron_cleaver",
+            new CleaverItem(ToolMaterials.IRON, 2, -2.8f, new FabricItemSettings().maxCount(1)));
     public static final Item DIAMOND_CLEAVER = registerItem("diamond_cleaver",
             new CleaverItem(ToolMaterials.DIAMOND, 2, -2.8f, new FabricItemSettings().maxCount(1)));
+    public static final Item NETHERITE_CLEAVER = registerItem("netherite_cleaver",
+            new CleaverItem(ToolMaterials.NETHERITE, 2, -2.8f, new FabricItemSettings().maxCount(1).fireproof()));
 
-    public static final Item DIAMOND_BATTLE_AXE = registerItem("diamond_battle_axe",
+
+    public static final Item WOODEN_BATTLEAXE = registerItem("wooden_battleaxe",
+            new BattleAxeItem(ToolMaterials.WOOD, 5, -2.9f, new FabricItemSettings().maxCount(1)));
+    public static final Item GOLD_BATTLEAXE = registerItem("gold_battleaxe",
+            new BattleAxeItem(ToolMaterials.GOLD, 5, -2.9f, new FabricItemSettings().maxCount(1)));
+    public static final Item STONE_BATTLEAXE = registerItem("stone_battleaxe",
+            new BattleAxeItem(ToolMaterials.STONE, 5, -2.9f, new FabricItemSettings().maxCount(1)));
+    public static final Item IRON_BATTLEAXE = registerItem("iron_battleaxe",
+            new BattleAxeItem(ToolMaterials.IRON, 5, -2.9f, new FabricItemSettings().maxCount(1)));
+    public static final Item DIAMOND_BATTLEAXE = registerItem("diamond_battleaxe",
             new BattleAxeItem(ToolMaterials.DIAMOND, 5, -2.9f, new FabricItemSettings().maxCount(1)));
+    public static final Item NETHERITE_BATTLEAXE = registerItem("netherite_battleaxe",
+            new BattleAxeItem(ToolMaterials.NETHERITE, 5, -2.9f, new FabricItemSettings().maxCount(1)));
+
 
     public static final Item WOODEN_DAGGER = registerItem("wooden_dagger",
             new DaggerItem(ToolMaterials.WOOD, 2, -2f, new FabricItemSettings().maxCount(1)));
@@ -61,7 +103,21 @@ public class ModItems {
     public static final Item DIAMOND_DAGGER = registerItem("diamond_dagger",
             new DaggerItem(ToolMaterials.DIAMOND, 2, -2f, new FabricItemSettings().maxCount(1)));
     public static final Item NETHERITE_DAGGER = registerItem("netherite_dagger",
-            new DaggerItem(ToolMaterials.NETHERITE, 2, -2f, new FabricItemSettings().maxCount(1)));
+            new DaggerItem(ToolMaterials.NETHERITE, 2, -2f, new FabricItemSettings().maxCount(1).fireproof()));
+
+    public static final Item WOODEN_LONGSWORD = registerItem("wooden_longsword",
+            new LongSwordItem(ToolMaterials.WOOD, 5, -3f, new FabricItemSettings().maxCount(1)));
+    public static final Item GOLD_LONGSWORD = registerItem("gold_longsword",
+            new LongSwordItem(ToolMaterials.GOLD, 5, -3f, new FabricItemSettings().maxCount(1)));
+    public static final Item STONE_LONGSWORD = registerItem("stone_longsword",
+            new LongSwordItem(ToolMaterials.STONE, 5, -3f, new FabricItemSettings().maxCount(1)));
+    public static final Item IRON_LONGSWORD = registerItem("iron_longsword",
+            new LongSwordItem(ToolMaterials.IRON, 5, -3f, new FabricItemSettings().maxCount(1)));
+    public static final Item DIAMOND_LONGSWORD = registerItem("diamond_longsword",
+            new LongSwordItem(ToolMaterials.DIAMOND, 5, -3f, new FabricItemSettings().maxCount(1)));
+    public static final Item NETHERITE_LONGSWORD = registerItem("netherite_longsword",
+            new LongSwordItem(ToolMaterials.NETHERITE, 5, -3f, new FabricItemSettings().maxCount(1).fireproof()));
+
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
 

@@ -14,13 +14,33 @@
   "item.pawelsweaponry.gold_spear": "Gold Spear",
   "item.pawelsweaponry.iron_spear": "Iron Spear",
 
+  "item.pawelsweaponry.wooden_dual_blade": "Wooden Dual Blade",
+  "item.pawelsweaponry.gold_dual_blade": "Gold Dual Blade",
+  "item.pawelsweaponry.stone_dual_blade": "Stone Dual Blade",
+  "item.pawelsweaponry.iron_dual_blade": "Iron Dual Blade",
   "item.pawelsweaponry.diamond_dual_blade": "Diamond Dual Blade",
+  "item.pawelsweaponry.netherite_dual_blade": "Netherite Dual Blade",
 
+  "item.pawelsweaponry.wooden_katana": "Wooden Katana",
+  "item.pawelsweaponry.gold_katana": "Gold Katana",
+  "item.pawelsweaponry.stone_katana": "Stone Katana",
+  "item.pawelsweaponry.Iron_katana": "Iron Katana",
   "item.pawelsweaponry.diamond_katana": "Diamond Katana",
+  "item.pawelsweaponry.netherite_katana": "Netherite Katana",
 
+  "item.pawelsweaponry.wooden_cleaver": "Wooden Cleaver",
+  "item.pawelsweaponry.gold_cleaver": "Gold Cleaver",
+  "item.pawelsweaponry.stone_cleaver": "Stone Cleaver",
+  "item.pawelsweaponry.iron_cleaver": "Iron Cleaver",
   "item.pawelsweaponry.diamond_cleaver": "Diamond Cleaver",
+  "item.pawelsweaponry.netherite_cleaver": "Netherite Cleaver",
 
-  "item.pawelsweaponry.diamond_battle_axe": "Diamond Battle Axe",
+  "item.pawelsweaponry.wooden_battleaxe": "Wooden BattleAxe",
+  "item.pawelsweaponry.gold_battleaxe": "Gold BattleAxe",
+  "item.pawelsweaponry.stone_battleaxe": "Stone BattleAxe",
+  "item.pawelsweaponry.iron_battleaxe": "Iron BattleAxe",
+  "item.pawelsweaponry.diamond_battleaxe": "Diamond BattleAxe",
+  "item.pawelsweaponry.netherite_battleaxe": "Netherite BattleAxe",
 
   "item.pawelsweaponry.wooden_dagger": "Wooden Dagger",
   "item.pawelsweaponry.gold_dagger": "Gold Dagger",
@@ -28,6 +48,15 @@
   "item.pawelsweaponry.iron_dagger": "Iron Dagger",
   "item.pawelsweaponry.diamond_dagger": "Diamond Dagger",
   "item.pawelsweaponry.netherite_dagger": "Netherite Dagger",
+
+  "item.pawelsweaponry.wooden_longsword": "Wooden Longsword",
+  "item.pawelsweaponry.gold_longsword": "Gold Longsword",
+  "item.pawelsweaponry.stone_longsword": "Stone Longsword",
+  "item.pawelsweaponry.iron_longsword": "Iron Longsword",
+  "item.pawelsweaponry.diamond_longsword": "Diamond Longsword",
+  "item.pawelsweaponry.netherite_longsword": "Netherite Longsword",
+
+  "item.pawelsweaponry.tower_shield": "Tower Shield",
 
   "effect.pawelsweaponry.incapacitated": "Incapacitated",
   "effect.pawelsweaponry.wounded": "Wounded",
