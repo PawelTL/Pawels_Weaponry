@@ -1,0 +1,41 @@
+{
+
+  "item.pawelsweaponry.diamond_hammer": "Diamond Hammer",
+  "item.pawelsweaponry.wooden_hammer": "Wooden Hammer",
+  "item.pawelsweaponry.stone_hammer": "Stone Hammer",
+  "item.pawelsweaponry.netherite_hammer": "Netherite Hammer",
+  "item.pawelsweaponry.gold_hammer": "Gold Hammer",
+  "item.pawelsweaponry.iron_hammer": "Iron Hammer",
+
+  "item.pawelsweaponry.diamond_spear": "Diamond Spear",
+  "item.pawelsweaponry.wooden_spear": "Wooden Spear",
+  "item.pawelsweaponry.stone_spear": "Stone Spear",
+  "item.pawelsweaponry.netherite_spear": "Netherite Spear",
+  "item.pawelsweaponry.gold_spear": "Gold Spear",
+  "item.pawelsweaponry.iron_spear": "Iron Spear",
+
+  "item.pawelsweaponry.diamond_dual_blade": "Diamond Dual Blade",
+
+  "item.pawelsweaponry.diamond_katana": "Diamond Katana",
+
+  "item.pawelsweaponry.diamond_cleaver": "Diamond Cleaver",
+
+  "item.pawelsweaponry.diamond_battle_axe": "Diamond Battle Axe",
+
+  "item.pawelsweaponry.wooden_dagger": "Wooden Dagger",
+  "item.pawelsweaponry.gold_dagger": "Gold Dagger",
+  "item.pawelsweaponry.stone_dagger": "Stone Dagger",
+  "item.pawelsweaponry.iron_dagger": "Iron Dagger",
+  "item.pawelsweaponry.diamond_dagger": "Diamond Dagger",
+  "item.pawelsweaponry.netherite_dagger": "Netherite Dagger",
+
+  "effect.pawelsweaponry.incapacitated": "Incapacitated",
+  "effect.pawelsweaponry.wounded": "Wounded",
+  "effect.pawelsweaponry.toxin": "Toxin",
+
+  "death.attack.custom": "%1$s succumbed to toxin.",
+
+  "enchantment.pawelsweaponry.toxic": "Toxic",
+
+  "itemgroup.diamond_hammer": "Pawel's Weaponry"
+}
