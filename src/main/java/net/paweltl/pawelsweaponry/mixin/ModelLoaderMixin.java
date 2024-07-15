@@ -21,19 +21,43 @@ public abstract class ModelLoaderMixin {
     @Shadow
     protected abstract void addModel(ModelIdentifier modelId);
     @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
-    public void addDiamondHammer(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
+    public void addWeaponModels(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_hammer_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_hammer_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_hammer_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_hammer_3d", "inventory"));
         this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_hammer_3d", "inventory"));
-    }
-    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
-    public void addDiamondSpear(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
-        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_spear_3d", "inventory"));
-    }
-    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
-    public void addDiamondKatana(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
-        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_katana_3d", "inventory"));
-    }
-    @Inject(method = "<init>", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/model/ModelLoader;addModel(Lnet/minecraft/client/util/ModelIdentifier;)V", ordinal = 3, shift = At.Shift.AFTER))
-    public void addDiamondLongsword(BlockColors blockColors, Profiler profiler, Map<Identifier, JsonUnbakedModel> jsonUnbakedModels, Map<Identifier, List<ModelLoader.SourceTrackedData>> blockStates, CallbackInfo ci) {
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_hammer_3d", "inventory"));
+
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_longsword_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_longsword_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_longsword_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_longsword_3d", "inventory"));
         this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_longsword_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_longsword_3d", "inventory"));
+
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_spear_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_spear_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_spear_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_spear_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_spear_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_spear_3d", "inventory"));
+
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_katana_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_katana_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_katana_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_katana_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_katana_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_katana_3d", "inventory"));
+
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_battleaxe_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_battleaxe_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_battleaxe_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_battleaxe_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_battleaxe_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_battleaxe_3d", "inventory"));
+
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_katana_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_spear_3d", "inventory"));
     }
 }

@@ -23,19 +23,106 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(ItemRenderer.class)
 public abstract class ItemRendererMixin {
     @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
-    public BakedModel useDiamondHammerModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
+    public BakedModel useWeaponModels(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
+        if (stack.isOf(ModItems.WOODEN_HAMMER) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_hammer_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.GOLD_HAMMER) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_hammer_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.STONE_HAMMER) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_hammer_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.IRON_HAMMER) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_hammer_3d", "inventory"));
+        }
         if (stack.isOf(ModItems.DIAMOND_HAMMER) && renderMode != ModelTransformationMode.GUI) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_hammer_3d", "inventory"));
         }
-        if (stack.isOf(ModItems.DIAMOND_SPEAR) && renderMode != ModelTransformationMode.GUI) {
-            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_spear_3d", "inventory"));
+        if (stack.isOf(ModItems.NETHERITE_HAMMER) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_hammer_3d", "inventory"));
+        }
+
+
+        if (stack.isOf(ModItems.WOODEN_KATANA) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_katana_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.GOLD_KATANA) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_katana_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.STONE_KATANA) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_katana_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.IRON_KATANA) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_katana_3d", "inventory"));
         }
         if (stack.isOf(ModItems.DIAMOND_KATANA) && renderMode != ModelTransformationMode.GUI) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_katana_3d", "inventory"));
         }
+        if (stack.isOf(ModItems.NETHERITE_KATANA) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_katana_3d", "inventory"));
+        }
+
+
+        if (stack.isOf(ModItems.WOODEN_SPEAR) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_spear_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.GOLD_SPEAR) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_spear_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.STONE_SPEAR) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_spear_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.IRON_SPEAR) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_spear_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.DIAMOND_SPEAR) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_spear_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.NETHERITE_SPEAR) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_spear_3d", "inventory"));
+        }
+
+
+        if (stack.isOf(ModItems.WOODEN_BATTLEAXE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_battleaxe_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.GOLD_BATTLEAXE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_battleaxe_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.STONE_BATTLEAXE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_battleaxe_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.IRON_BATTLEAXE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_battleaxe_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.DIAMOND_BATTLEAXE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_battleaxe_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.NETHERITE_BATTLEAXE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_battleaxe_3d", "inventory"));
+        }
+
+
+        if (stack.isOf(ModItems.WOODEN_LONGSWORD) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_longsword_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.GOLD_LONGSWORD) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_longsword_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.STONE_LONGSWORD) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_longsword_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.IRON_LONGSWORD) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_longsword_3d", "inventory"));
+        }
         if (stack.isOf(ModItems.DIAMOND_LONGSWORD) && renderMode != ModelTransformationMode.GUI) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_longsword_3d", "inventory"));
         }
+        if (stack.isOf(ModItems.NETHERITE_LONGSWORD) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_longsword_3d", "inventory"));
+        }
+
         return value;
     }
 

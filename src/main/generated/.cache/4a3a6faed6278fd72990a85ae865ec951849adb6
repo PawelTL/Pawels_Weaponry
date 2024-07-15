@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-14T20:06:09.1865258	Pawel's Weaponry/Recipes
+// 1.20.1	2024-07-15T20:05:48.8409142	Pawel's Weaponry/Recipes
 7ef8ffd5563486ae7487a6678607f641ded129e6 data\pawelsweaponry\advancements\recipes\combat\diamond_hammer.json
 2b668742edd980351172a571bb8a5b6d9aa3c4ba data\pawelsweaponry\advancements\recipes\combat\iron_cleaver.json
 c8f77ee025547d5ebe167de8a710fb0c6615d119 data\pawelsweaponry\advancements\recipes\combat\gold_spear.json
@@ -32,8 +32,8 @@ a61c8a757ca2310d5c83179ad6d21b859c73b16e data\pawelsweaponry\recipes\diamond_spe
 de3127d00dd4a5f860c18e6902a609e3435896b6 data\pawelsweaponry\advancements\recipes\combat\iron_dagger.json
 b308b429f85d76e11bb53d4d68cdedbb7138f211 data\pawelsweaponry\advancements\recipes\combat\diamond_dagger.json
 0c2d35ec9082cbb870c90dba2229595f4017fc64 data\pawelsweaponry\recipes\iron_hammer.json
-4114dfa3ddfdd080cf5b02050b3500cf94e91995 data\pawelsweaponry\advancements\recipes\combat\wooden_battleaxe.json
 603936e0ad5a14dd34ed7e9e145b5fd97166a475 data\pawelsweaponry\recipes\iron_spear.json
+4114dfa3ddfdd080cf5b02050b3500cf94e91995 data\pawelsweaponry\advancements\recipes\combat\wooden_battleaxe.json
 08d909a29c76b03a3f61d9d37713abb3ee2aca6e data\pawelsweaponry\recipes\iron_battleaxe.json
 48ec5bf89a110ba4ca1ca67261cf7fec6264c77b data\pawelsweaponry\recipes\diamond_hammer.json
 86f2a23c483d5bf824731c48e73a7fdbaae3952c data\pawelsweaponry\recipes\wooden_dagger.json
