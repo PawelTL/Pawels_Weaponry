@@ -1,6 +1,7 @@
 package net.paweltl.pawelsweaponry.item.custom;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -11,9 +12,13 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.UUID;
 
 public class BattleAxeItem extends SwordItem {
@@ -43,6 +48,11 @@ public class BattleAxeItem extends SwordItem {
             }
 
         }
+    }
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.translatable("tooltip.tutorialmod.battleaxe.tooltip").formatted(Formatting.GRAY));
+        super.appendTooltip(stack, world, tooltip, context);
     }
         static {
             ATTACK_DAMAGE_MODIFIER = new EntityAttributeModifier(ATTACK_DAMAGE_BONUS_MODIFIER_ID, "Axe critical strike bonus", 0.2D, EntityAttributeModifier.Operation.MULTIPLY_BASE);

@@ -2,9 +2,13 @@ package net.paweltl.pawelsweaponry.item.custom;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeInstance;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -16,6 +20,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
@@ -66,8 +71,8 @@ public class HammerItem extends SwordItem implements Vanishable{
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.literal("Slow but powerful two-handed weapon capable of breaking shields."));
-        tooltip.add(Text.literal("Hold right click to charge up a powerful slam."));
+        tooltip.add(Text.translatable("tooltip.tutorialmod.hammer.tooltip").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("tooltip.tutorialmod.two_handed.tooltip").formatted(Formatting.GRAY).formatted(Formatting.BOLD));
         super.appendTooltip(stack, world, tooltip, context);
     }
 
@@ -84,11 +89,11 @@ public class HammerItem extends SwordItem implements Vanishable{
             world.addImportantParticle(ParticleTypes.CRIT, user.getX(), user.getY(), user.getZ(), MathHelper.cos(i) * 3, 1f, MathHelper.sin(i) * 3);
         }
         world.playSound(user, user.getBlockPos(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, ((float)1.0), ((float)1.0));
-        List<Entity> targets = world.getOtherEntities(user, Box.of(user.getPos(), 8, 3, 8));
+        List<Entity> targets = world.getOtherEntities(null, Box.of(user.getPos(), 8, 3, 8));
         targets.forEach(entity -> {
             if (entity.isLiving()) {
                 ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(PawelsWeaponry.INCAPACITATED, 100, 0));
-                entity.damage(world.getDamageSources().playerAttack(((PlayerEntity)user)), getAttackDamage() * 2 + 10);
+                entity.damage(world.getDamageSources().playerAttack(((PlayerEntity)user)), (float) ((user.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE) + EnchantmentHelper.getAttackDamage(stack, ((LivingEntity) entity).getGroup())) * 1.8));
             }});
         return super.finishUsing(stack, world, user);
     }

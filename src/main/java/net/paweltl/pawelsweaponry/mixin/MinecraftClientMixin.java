@@ -20,7 +20,9 @@ public class MinecraftClientMixin {
     @Inject(method = "doAttack", at = @At(value = "HEAD"), cancellable = true)
     private void doAttackMixin(CallbackInfoReturnable<Boolean> info) {
         ItemStack itemStack = player.getMainHandStack();
-        if ((itemStack.getItem() instanceof LongSwordItem || itemStack.getItem() instanceof HammerItem) && !player.getOffHandStack().isEmpty())
+        ItemStack offHandStack = player.getOffHandStack();
+        if (((itemStack.getItem() instanceof LongSwordItem || itemStack.getItem() instanceof HammerItem) && !player.getOffHandStack().isEmpty()) ||
+                ((offHandStack.getItem() instanceof LongSwordItem || offHandStack.getItem() instanceof HammerItem) && !player.getMainHandStack().isEmpty()))
             info.setReturnValue(false);
     }
 
@@ -28,7 +30,9 @@ public class MinecraftClientMixin {
     private void doItemUseMixin(CallbackInfo info) {
         if (player != null) {
             ItemStack itemStack = player.getMainHandStack();
-            if ((itemStack.getItem() instanceof LongSwordItem || itemStack.getItem() instanceof HammerItem) && !player.getOffHandStack().isEmpty())
+            ItemStack offHandStack = player.getOffHandStack();
+            if (((itemStack.getItem() instanceof LongSwordItem || itemStack.getItem() instanceof HammerItem) && !player.getOffHandStack().isEmpty()) ||
+                    ((offHandStack.getItem() instanceof LongSwordItem || offHandStack.getItem() instanceof HammerItem) && !player.getMainHandStack().isEmpty()))
                 info.cancel();
         }
     }

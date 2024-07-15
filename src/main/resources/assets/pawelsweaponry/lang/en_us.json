@@ -24,7 +24,7 @@
   "item.pawelsweaponry.wooden_katana": "Wooden Katana",
   "item.pawelsweaponry.gold_katana": "Gold Katana",
   "item.pawelsweaponry.stone_katana": "Stone Katana",
-  "item.pawelsweaponry.Iron_katana": "Iron Katana",
+  "item.pawelsweaponry.iron_katana": "Iron Katana",
   "item.pawelsweaponry.diamond_katana": "Diamond Katana",
   "item.pawelsweaponry.netherite_katana": "Netherite Katana",
 
@@ -65,6 +65,18 @@
   "death.attack.custom": "%1$s succumbed to toxin.",
 
   "enchantment.pawelsweaponry.toxic": "Toxic",
+
+ "tooltip.tutorialmod.battleaxe.tooltip": "Has more powerful critical strikes.",
+ "tooltip.tutorialmod.cleaver.tooltip": "Applies an effect that reduces healing from food.",
+ "tooltip.tutorialmod.dagger.tooltip": "Has a unique enchant that applies toxin on hit.",
+ "tooltip.tutorialmod.dual_blade.tooltip": "Significantly stronger when used in pairs.",
+ "tooltip.tutorialmod.hammer.tooltip": "Hold right click to charge up a slam.",
+ "tooltip.tutorialmod.katana.tooltip": "Hold right click to charge up a short dash.",
+ "tooltip.tutorialmod.longsword.tooltip": "Hold right click to block a single hit.",
+ "tooltip.tutorialmod.spear.tooltip": "Has high range at the cost of losing sweeping.",
+
+  "tooltip.tutorialmod.two_handed.tooltip": "Two-Handed",
+  "tooltip.tutorialmod.dual_wielding.tooltip": "Dual-Wielding",
 
   "itemgroup.diamond_hammer": "Pawel's Weaponry"
 }
