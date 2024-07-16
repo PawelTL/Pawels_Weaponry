@@ -44,6 +44,26 @@ public abstract class ItemRendererMixin {
         }
 
 
+        if (stack.isOf(ModItems.WOODEN_DUAL_BLADE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_dual_blade_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.GOLD_DUAL_BLADE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_dual_blade_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.STONE_DUAL_BLADE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_dual_blade_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.IRON_DUAL_BLADE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_dual_blade_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.DIAMOND_DUAL_BLADE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_dual_blade_3d", "inventory"));
+        }
+        if (stack.isOf(ModItems.NETHERITE_DUAL_BLADE) && renderMode != ModelTransformationMode.GUI) {
+            return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_dual_blade_3d", "inventory"));
+        }
+
+
         if (stack.isOf(ModItems.WOODEN_KATANA) && renderMode != ModelTransformationMode.GUI) {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_katana_3d", "inventory"));
         }

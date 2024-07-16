@@ -29,6 +29,13 @@ public abstract class ModelLoaderMixin {
         this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_hammer_3d", "inventory"));
         this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_hammer_3d", "inventory"));
 
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_dual_blade_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_dual_blade_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_dual_blade_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "iron_dual_blade_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_dual_blade_3d", "inventory"));
+        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_dual_blade_3d", "inventory"));
+
         this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "wooden_longsword_3d", "inventory"));
         this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "gold_longsword_3d", "inventory"));
         this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "stone_longsword_3d", "inventory"));

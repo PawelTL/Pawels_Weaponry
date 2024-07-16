@@ -3,14 +3,9 @@ package net.paweltl.pawelsweaponry.item.custom;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityGroup;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.attribute.EntityAttribute;
-import net.minecraft.entity.attribute.EntityAttributeInstance;
-import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -31,7 +26,6 @@ import net.paweltl.pawelsweaponry.PawelsWeaponry;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
-import java.util.UUID;
 
 public class HammerItem extends SwordItem implements Vanishable{
 
@@ -89,7 +83,7 @@ public class HammerItem extends SwordItem implements Vanishable{
             world.addImportantParticle(ParticleTypes.CRIT, user.getX(), user.getY(), user.getZ(), MathHelper.cos(i) * 3, 1f, MathHelper.sin(i) * 3);
         }
         world.playSound(user, user.getBlockPos(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, ((float)1.0), ((float)1.0));
-        List<Entity> targets = world.getOtherEntities(null, Box.of(user.getPos(), 8, 3, 8));
+        List<Entity> targets = world.getOtherEntities(user, Box.of(user.getPos(), 8, 3, 8));
         targets.forEach(entity -> {
             if (entity.isLiving()) {
                 ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(PawelsWeaponry.INCAPACITATED, 100, 0));

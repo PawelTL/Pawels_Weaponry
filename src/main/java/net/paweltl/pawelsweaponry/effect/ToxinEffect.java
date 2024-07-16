@@ -1,13 +1,8 @@
 package net.paweltl.pawelsweaponry.effect;
 
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageSources;
-import net.minecraft.entity.damage.DamageType;
-import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.world.World;
 import net.paweltl.pawelsweaponry.PawelsWeaponry;
 
 public class ToxinEffect extends StatusEffect {

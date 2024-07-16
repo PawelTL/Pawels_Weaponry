@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/pawelsweaponry/icon.png",
+	"icon": "assets/pawelsweaponry/textures/item/netherite_battleaxe.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

@@ -15,7 +15,6 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
-import net.paweltl.pawelsweaponry.block.ModBlocks;
 import net.paweltl.pawelsweaponry.effect.IncapacitateEffect;
 import net.paweltl.pawelsweaponry.effect.ToxinEffect;
 import net.paweltl.pawelsweaponry.effect.WoundedEffect;
@@ -28,10 +27,10 @@ import org.slf4j.LoggerFactory;
 public class PawelsWeaponry implements ModInitializer {
 	public static final String MOD_ID = "pawelsweaponry";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final StatusEffect INCAPACITATED = new IncapacitateEffect(StatusEffectCategory.HARMFUL, 0x98D982)
+	public static final StatusEffect INCAPACITATED = new IncapacitateEffect(StatusEffectCategory.HARMFUL, 0x505250)
 			.addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,  "f81d4fae-7dec-11d0-a765-00a0c91e6bf6", -0.5, EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
-	public static final StatusEffect WOUNDED = new WoundedEffect(StatusEffectCategory.HARMFUL, 0x98D982);
-	public static final StatusEffect TOXIN = new ToxinEffect(StatusEffectCategory.HARMFUL, 0x98D982);
+	public static final StatusEffect WOUNDED = new WoundedEffect(StatusEffectCategory.HARMFUL, 0x8a0416);
+	public static final StatusEffect TOXIN = new ToxinEffect(StatusEffectCategory.HARMFUL, 0x0f4d02);
 
 	public static final RegistryKey<DamageType> TOXIN_DAMAGE_TYPE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, new Identifier("pawelsweaponry", "toxin_damage_type"));
 
@@ -46,13 +45,13 @@ public class PawelsWeaponry implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
 
 		Registry.register(Registries.STATUS_EFFECT, new Identifier(PawelsWeaponry.MOD_ID, "incapacitated"), INCAPACITATED);
 		Registry.register(Registries.STATUS_EFFECT, new Identifier(PawelsWeaponry.MOD_ID, "wounded"), WOUNDED);
 		Registry.register(Registries.STATUS_EFFECT, new Identifier(PawelsWeaponry.MOD_ID, "toxin"), TOXIN);
 
 		Registry.register(Registries.ENCHANTMENT, new Identifier("pawelsweaponry", "toxic"), TOXIC);
+
 
 
 	}

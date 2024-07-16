@@ -21,13 +21,6 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
 
-        itemModelGenerator.register(ModItems.WOODEN_DUAL_BLADE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.GOLD_DUAL_BLADE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.STONE_DUAL_BLADE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.IRON_DUAL_BLADE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.DIAMOND_DUAL_BLADE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.NETHERITE_DUAL_BLADE, Models.HANDHELD);
-
         itemModelGenerator.register(ModItems.WOODEN_CLEAVER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.GOLD_CLEAVER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.STONE_CLEAVER, Models.HANDHELD);

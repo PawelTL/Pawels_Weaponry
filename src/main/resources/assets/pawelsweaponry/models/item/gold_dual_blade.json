@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pawelsweaponry:item/gold_dual_blade"
+  }
+}

@@ -7,7 +7,6 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.paweltl.pawelsweaponry.PawelsWeaponry;
-import net.paweltl.pawelsweaponry.item.custom.DaggerItem;
 
 public class ToxicEnchantment extends Enchantment {
     public ToxicEnchantment() {

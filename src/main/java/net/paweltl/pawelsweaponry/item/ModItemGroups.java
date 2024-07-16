@@ -8,7 +8,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.paweltl.pawelsweaponry.PawelsWeaponry;
-import net.paweltl.pawelsweaponry.block.ModBlocks;
 
 public class ModItemGroups {
 

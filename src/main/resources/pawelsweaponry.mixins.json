@@ -5,7 +5,6 @@
   "mixins": [
     "DisableShieldAccessor",
     "EnchantmentMixin",
-    "ExampleMixin",
     "LivingEntityMixin",
     "PlayerEntityMixin"
   ],
