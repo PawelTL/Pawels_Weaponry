@@ -1,0 +1,18 @@
+{
+	"parent": "pawelsweaponry:item/heavy_crossbow",
+	"textures": {
+		"layer0": "pawelsweaponry:item/heavy_crossbow_pulling_0"
+	},
+	"display": {
+		"firstperson_righthand": {
+			"rotation": [ -90, 0, -40 ],
+			"translation": [ 1.13, -4, -10.13],
+			"scale": [ 0.75, 0.75, 0.75 ]
+		},
+		"firstperson_lefthand": {
+			"rotation": [ -90, 0, 50 ],
+			"translation": [ 1.13, -4, -10.13],
+			"scale": [ 0.75, 0.75, 0.75 ]
+		}
+	}
+}

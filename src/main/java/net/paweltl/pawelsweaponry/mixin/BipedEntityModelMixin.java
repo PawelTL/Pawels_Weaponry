@@ -32,8 +32,6 @@ public abstract class BipedEntityModelMixin<T extends LivingEntity> extends Anim
     private void setAnglesMixin(T livingEntity, float f, float g, float h, float i, float j, CallbackInfo info) {
         if (!CompatInit.isBetterCombatLoaded) {
             if (livingEntity.getMainHandStack().getItem() instanceof SpearItem) {
-                this.rightArm.yaw = this.head.yaw * 0.5f;
-                this.rightArm.pitch = this.head.pitch * 0.5f - 0.2f;
 
                 if (this.handSwingProgress > 0) {
                     float gx = 1.0F - this.handSwingProgress;

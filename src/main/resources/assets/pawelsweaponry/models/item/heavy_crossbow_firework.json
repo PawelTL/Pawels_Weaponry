@@ -1,0 +1,6 @@
+{
+	"parent": "pawelsweaponry:item/heavy_crossbow",
+	"textures": {
+		"layer0": "pawelsweaponry:item/heavy_crossbow_firework"
+	}
+}

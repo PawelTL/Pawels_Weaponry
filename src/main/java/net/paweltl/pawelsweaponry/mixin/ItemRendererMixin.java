@@ -143,6 +143,8 @@ public abstract class ItemRendererMixin {
             return ((ItemRendererAccessor) this).mccourse$getModels().getModelManager().getModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_longsword_3d", "inventory"));
         }
 
+
+
         return value;
     }
 

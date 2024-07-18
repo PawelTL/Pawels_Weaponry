@@ -56,6 +56,8 @@
   "item.pawelsweaponry.diamond_longsword": "Diamond Longsword",
   "item.pawelsweaponry.netherite_longsword": "Netherite Longsword",
 
+  "item.pawelsweaponry.heavy_crossbow": "Heavy Crossbow",
+
   "item.pawelsweaponry.tower_shield": "Tower Shield",
 
   "effect.pawelsweaponry.incapacitated": "Incapacitated",
@@ -74,6 +76,7 @@
  "tooltip.tutorialmod.katana.tooltip": "Hold right click to charge up a short dash.",
  "tooltip.tutorialmod.longsword.tooltip": "Hold right click to block a single hit.",
  "tooltip.tutorialmod.spear.tooltip": "Has high range at the cost of losing sweeping.",
+ "tooltip.tutorialmod.heavy_crossbow.tooltip": "Stronger but slower, can be enchanted with power.",
 
   "tooltip.tutorialmod.two_handed.tooltip": "Two-Handed",
   "tooltip.tutorialmod.dual_wielding.tooltip": "Dual-Wielding",

@@ -72,6 +72,10 @@ public class ModItemGroups {
                         entries.add(ModItems.DIAMOND_LONGSWORD);
                         entries.add(ModItems.NETHERITE_LONGSWORD);
 
+                        entries.add(ModItems.HEAVY_CROSSBOW);
+
+                        entries.add(ModItems.TOWER_SHIELD);
+
 
 
                     }).build());

@@ -36,5 +36,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DIAMOND_DAGGER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.NETHERITE_DAGGER, Models.HANDHELD);
 
+
     }
 }

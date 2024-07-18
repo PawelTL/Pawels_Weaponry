@@ -118,6 +118,12 @@ public class ModItems {
     public static final Item NETHERITE_LONGSWORD = registerItem("netherite_longsword",
             new LongSwordItem(ToolMaterials.NETHERITE, 5, -3f, new FabricItemSettings().maxCount(1).fireproof()));
 
+    public static final Item HEAVY_CROSSBOW = registerItem("heavy_crossbow",
+            new HeavyCrossbowItem(new FabricItemSettings().maxCount(1)));
+
+    public static final Item TOWER_SHIELD = registerItem("tower_shield",
+            new TowerShieldItem(new FabricItemSettings().maxCount(1).maxDamage(600)));
+
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
 

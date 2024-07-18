@@ -81,6 +81,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         battleaxe(ModItems.DIAMOND_BATTLEAXE, Items.DIAMOND, exporter);
         offerNetheriteUpgradeRecipe(exporter, ModItems.DIAMOND_BATTLEAXE, RecipeCategory.COMBAT, ModItems.NETHERITE_BATTLEAXE);
 
+        offerNetheriteUpgradeRecipe(exporter, Items.CROSSBOW, RecipeCategory.COMBAT, ModItems.HEAVY_CROSSBOW);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.TOWER_SHIELD)
+                .pattern("ixi")
+                .pattern("xxx")
+                .pattern("ixi")
+                .input('x', ItemTags.PLANKS)
+                .input('i', Items.IRON_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT), FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.TOWER_SHIELD)));
+
 
     }
     private void dagger(ItemConvertible output, ItemConvertible material, Consumer<RecipeJsonProvider> exporter) {
@@ -239,5 +250,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion("has_material", FabricRecipeProvider.conditionsFromTag(material))
                 .offerTo(exporter, new Identifier(getRecipeName(output)));
     }
+
 
 }

@@ -64,7 +64,6 @@ public abstract class ModelLoaderMixin {
         this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_battleaxe_3d", "inventory"));
         this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "netherite_battleaxe_3d", "inventory"));
 
-        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_katana_3d", "inventory"));
-        this.addModel(new ModelIdentifier(PawelsWeaponry.MOD_ID, "diamond_spear_3d", "inventory"));
+
     }
 }

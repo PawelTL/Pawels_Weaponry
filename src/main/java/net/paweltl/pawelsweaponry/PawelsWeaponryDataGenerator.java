@@ -3,6 +3,8 @@ package net.paweltl.pawelsweaponry;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.paweltl.pawelsweaponry.datagen.*;
+import net.paweltl.pawelsweaponry.item.ModItems;
+import net.paweltl.pawelsweaponry.util.ModModelPredicateProvider;
 
 public class PawelsWeaponryDataGenerator implements DataGeneratorEntrypoint {
 	@Override

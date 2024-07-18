@@ -7,6 +7,7 @@ import net.minecraft.item.FishingRodItem;
 import net.minecraft.item.ItemStack;
 import net.paweltl.pawelsweaponry.PawelsWeaponry;
 import net.paweltl.pawelsweaponry.item.custom.DaggerItem;
+import net.paweltl.pawelsweaponry.item.custom.HeavyCrossbowItem;
 import net.paweltl.pawelsweaponry.item.custom.SpearItem;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -29,6 +30,9 @@ public class EnchantmentMixin {
         }
         if ((Object) this == PawelsWeaponry.TOXIC && stack.getItem() instanceof FishingRodItem) {
             info.setReturnValue(false);
+        }
+        if ((Object) this == Enchantments.POWER && stack.getItem() instanceof HeavyCrossbowItem) {
+            info.setReturnValue(true);
         }
     }
 }
