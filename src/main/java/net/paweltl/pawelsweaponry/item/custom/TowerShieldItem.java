@@ -2,16 +2,11 @@ package net.paweltl.pawelsweaponry.item.custom;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
-import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.ShieldItem;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.util.ActionResult;
-import net.paweltl.pawelsweaponry.init.CompatInit;
 
 public class TowerShieldItem extends ShieldItem {
 

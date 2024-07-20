@@ -12,22 +12,22 @@ import net.paweltl.pawelsweaponry.PawelsWeaponry;
 public class ModItemGroups {
 
     public static final ItemGroup DIAMOND_HAMMER_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(PawelsWeaponry.MOD_ID, "diamond_dagger"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.diamond_hammer"))
-                    .icon(() -> new ItemStack(ModItems.DIAMOND_DAGGER)).entries((displayContext, entries) -> {
+            new Identifier(PawelsWeaponry.MOD_ID, "netherite_battleaxe"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.netherite_battleaxe"))
+                    .icon(() -> new ItemStack(ModItems.NETHERITE_BATTLEAXE)).entries((displayContext, entries) -> {
 
-                        entries.add(ModItems.DIAMOND_HAMMER);
+                        entries.add(ModItems.WOODEN_HAMMER);
                         entries.add(ModItems.STONE_HAMMER);
                         entries.add(ModItems.GOLD_HAMMER);
-                        entries.add(ModItems.WOODEN_HAMMER);
                         entries.add(ModItems.IRON_HAMMER);
+                        entries.add(ModItems.DIAMOND_HAMMER);
                         entries.add(ModItems.NETHERITE_HAMMER);
 
-                        entries.add(ModItems.DIAMOND_SPEAR);
-                        entries.add(ModItems.STONE_SPEAR);
-                        entries.add(ModItems.GOLD_SPEAR);
                         entries.add(ModItems.WOODEN_SPEAR);
+                        entries.add(ModItems.GOLD_SPEAR);
+                        entries.add(ModItems.STONE_SPEAR);
                         entries.add(ModItems.IRON_SPEAR);
+                        entries.add(ModItems.DIAMOND_SPEAR);
                         entries.add(ModItems.NETHERITE_SPEAR);
 
                         entries.add(ModItems.WOODEN_DUAL_BLADE);
@@ -71,6 +71,16 @@ public class ModItemGroups {
                         entries.add(ModItems.IRON_LONGSWORD);
                         entries.add(ModItems.DIAMOND_LONGSWORD);
                         entries.add(ModItems.NETHERITE_LONGSWORD);
+
+                        entries.add(ModItems.JUGGERNAUT_HELMET);
+                        entries.add(ModItems.JUGGERNAUT_CHESTPLATE);
+                        entries.add(ModItems.JUGGERNAUT_LEGGINGS);
+                        entries.add(ModItems.JUGGERNAUT_BOOTS);
+
+                        entries.add(ModItems.BERSERKER_HELMET);
+                        entries.add(ModItems.BERSERKER_CHESTPLATE);
+                        entries.add(ModItems.BERSERKER_LEGGINGS);
+                        entries.add(ModItems.BERSERKER_BOOTS);
 
                         entries.add(ModItems.HEAVY_CROSSBOW);
 

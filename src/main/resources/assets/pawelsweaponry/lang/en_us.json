@@ -56,6 +56,16 @@
   "item.pawelsweaponry.diamond_longsword": "Diamond Longsword",
   "item.pawelsweaponry.netherite_longsword": "Netherite Longsword",
 
+  "item.pawelsweaponry.juggernaut_helmet": "Juggernaut Helmet",
+  "item.pawelsweaponry.juggernaut_chestplate": "Juggernaut Chestplate",
+  "item.pawelsweaponry.juggernaut_leggings": "Juggernaut Leggings",
+  "item.pawelsweaponry.juggernaut_boots": "Juggernaut Boots",
+
+  "item.pawelsweaponry.berserker_helmet": "Berserker Helmet",
+  "item.pawelsweaponry.berserker_chestplate": "Berserker Chestplate",
+  "item.pawelsweaponry.berserker_leggings": "Berserker Leggings",
+  "item.pawelsweaponry.berserker_boots": "Berserker Boots",
+
   "item.pawelsweaponry.heavy_crossbow": "Heavy Crossbow",
 
   "item.pawelsweaponry.tower_shield": "Tower Shield",
@@ -81,5 +91,5 @@
   "tooltip.tutorialmod.two_handed.tooltip": "Two-Handed",
   "tooltip.tutorialmod.dual_wielding.tooltip": "Dual-Wielding",
 
-  "itemgroup.diamond_hammer": "Pawel's Weaponry"
+  "itemgroup.netherite_battleaxe": "Pawel's Weaponry"
 }

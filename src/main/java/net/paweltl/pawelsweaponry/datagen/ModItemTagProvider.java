@@ -3,6 +3,7 @@ package net.paweltl.pawelsweaponry.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.paweltl.pawelsweaponry.item.ModItems;
 import net.paweltl.pawelsweaponry.util.ModTags;
 
@@ -15,6 +16,11 @@ public class ModItemTagProvider  extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.JUGGERNAUT_HELMET, ModItems.JUGGERNAUT_CHESTPLATE, ModItems.JUGGERNAUT_LEGGINGS, ModItems.JUGGERNAUT_BOOTS)
+                .add(ModItems.BERSERKER_HELMET, ModItems.BERSERKER_CHESTPLATE, ModItems.BERSERKER_LEGGINGS, ModItems.BERSERKER_BOOTS);
+
         getOrCreateTagBuilder(ModTags.Items.PAWELS_WEAPONS)
                 .add(ModItems.DIAMOND_HAMMER)
                 .add(ModItems.DIAMOND_LONGSWORD)

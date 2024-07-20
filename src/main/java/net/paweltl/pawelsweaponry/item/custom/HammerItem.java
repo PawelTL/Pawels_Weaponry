@@ -41,13 +41,6 @@ public class HammerItem extends SwordItem implements Vanishable{
     }
 
 
-    @Override
-    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20, 1), attacker);
-        return super.postHit(stack, target, attacker);
-    }
-
-
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         user.setCurrentHand(hand);
@@ -75,12 +68,12 @@ public class HammerItem extends SwordItem implements Vanishable{
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        ((PlayerEntity)user).getItemCooldownManager().set(this, 200);
+        ((PlayerEntity)user).getItemCooldownManager().set(this, 220);
         for (int i = 0; i <=360; i+=6) {
             world.addImportantParticle(ParticleTypes.CRIT, user.getX(), user.getY(), user.getZ(), MathHelper.cos(i) * 3, 1f, MathHelper.sin(i) * 3);
         }
-        world.playSound(user, user.getBlockPos(), SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, ((float)1.0), ((float)1.0));
-        List<Entity> targets = world.getOtherEntities(user, Box.of(user.getPos(), 8, 3, 8));
+        world.playSound(user, user.getBlockPos(), SoundEvents.ENTITY_IRON_GOLEM_DAMAGE, SoundCategory.PLAYERS, ((float)1.0), ((float)1.0));
+        List<Entity> targets = world.getOtherEntities(user, Box.of(user.getPos(), 8, 2, 8));
         targets.forEach(entity -> {
             if (entity.isLiving()) {
                 ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance(PawelsWeaponry.INCAPACITATED, 100, 0));

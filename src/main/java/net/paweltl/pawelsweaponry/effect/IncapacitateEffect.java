@@ -21,6 +21,6 @@ public class IncapacitateEffect extends StatusEffect {
         if (entity.getVelocity().y > 0) {y = 0.4 * entity.getVelocity().y;}
         else {y = entity.getVelocity().y;}
         double z = entity.getVelocity().z;
-        entity.setVelocity(0.8 * x, y, 0.8 * z);
+        entity.setVelocity(0.75 * x, y, 0.75 * z);
     }
 }

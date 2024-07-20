@@ -535,8 +535,8 @@
 			"scale": [1.2, 1.2, 1.2]
 		},
 		"ground": {
-			"rotation": [-90, 0, 0],
-			"translation": [0, 1.25, 0],
+			"rotation": [0, 0, 0],
+			"translation": [0, 2, 4.5],
 			"scale": [0.6, 0.6, 0.6]
 		},
 		"fixed": {

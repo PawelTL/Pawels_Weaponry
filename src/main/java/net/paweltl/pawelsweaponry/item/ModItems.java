@@ -118,6 +118,24 @@ public class ModItems {
     public static final Item NETHERITE_LONGSWORD = registerItem("netherite_longsword",
             new LongSwordItem(ToolMaterials.NETHERITE, 5, -3f, new FabricItemSettings().maxCount(1).fireproof()));
 
+    public static final Item JUGGERNAUT_HELMET = registerItem("juggernaut_helmet",
+            new JuggernautArmorItem(ModArmorMaterials.JUGGERNAUT, ArmorItem.Type.HELMET, new FabricItemSettings().maxCount(1).fireproof()));
+    public static final Item JUGGERNAUT_CHESTPLATE = registerItem("juggernaut_chestplate",
+            new JuggernautArmorItem(ModArmorMaterials.JUGGERNAUT, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().maxCount(1).fireproof()));
+    public static final Item JUGGERNAUT_LEGGINGS = registerItem("juggernaut_leggings",
+            new JuggernautArmorItem(ModArmorMaterials.JUGGERNAUT, ArmorItem.Type.LEGGINGS, new FabricItemSettings().maxCount(1).fireproof()));
+    public static final Item JUGGERNAUT_BOOTS = registerItem("juggernaut_boots",
+            new JuggernautArmorItem(ModArmorMaterials.JUGGERNAUT, ArmorItem.Type.BOOTS, new FabricItemSettings().maxCount(1).fireproof()));
+
+    public static final Item BERSERKER_HELMET = registerItem("berserker_helmet",
+            new BerserkerArmorItem(ModArmorMaterials.BERSERKER, ArmorItem.Type.HELMET, new FabricItemSettings().maxCount(1).fireproof()));
+    public static final Item BERSERKER_CHESTPLATE = registerItem("berserker_chestplate",
+            new BerserkerArmorItem(ModArmorMaterials.BERSERKER, ArmorItem.Type.CHESTPLATE, new FabricItemSettings().maxCount(1).fireproof()));
+    public static final Item BERSERKER_LEGGINGS = registerItem("berserker_leggings",
+            new BerserkerArmorItem(ModArmorMaterials.BERSERKER, ArmorItem.Type.LEGGINGS, new FabricItemSettings().maxCount(1).fireproof()));
+    public static final Item BERSERKER_BOOTS = registerItem("berserker_boots",
+            new BerserkerArmorItem(ModArmorMaterials.BERSERKER, ArmorItem.Type.BOOTS, new FabricItemSettings().maxCount(1).fireproof()));
+
     public static final Item HEAVY_CROSSBOW = registerItem("heavy_crossbow",
             new HeavyCrossbowItem(new FabricItemSettings().maxCount(1)));
 

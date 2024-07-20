@@ -6,6 +6,7 @@ import net.minecraft.data.server.recipe.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
@@ -91,6 +92,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('i', Items.IRON_INGOT)
                 .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT), FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.TOWER_SHIELD)));
+
+        armor(Items.NETHERITE_HELMET, ModItems.JUGGERNAUT_HELMET, Items.IRON_BLOCK, exporter);
+        armor(Items.NETHERITE_CHESTPLATE, ModItems.JUGGERNAUT_CHESTPLATE, Items.IRON_BLOCK, exporter);
+        armor(Items.NETHERITE_LEGGINGS, ModItems.JUGGERNAUT_LEGGINGS, Items.IRON_BLOCK, exporter);
+        armor(Items.NETHERITE_BOOTS, ModItems.JUGGERNAUT_BOOTS, Items.IRON_BLOCK, exporter);
+
+        armor(Items.NETHERITE_HELMET, ModItems.BERSERKER_HELMET, Items.GOLD_BLOCK, exporter);
+        armor(Items.NETHERITE_CHESTPLATE, ModItems.BERSERKER_CHESTPLATE, Items.GOLD_BLOCK, exporter);
+        armor(Items.NETHERITE_LEGGINGS, ModItems.BERSERKER_LEGGINGS, Items.GOLD_BLOCK, exporter);
+        armor(Items.NETHERITE_BOOTS, ModItems.BERSERKER_BOOTS, Items.GOLD_BLOCK, exporter);
 
 
     }
@@ -249,6 +260,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('/', Items.STICK)
                 .criterion("has_material", FabricRecipeProvider.conditionsFromTag(material))
                 .offerTo(exporter, new Identifier(getRecipeName(output)));
+    }
+
+    private void armor(Item input, Item output, Item addition,  Consumer<RecipeJsonProvider> exporter) {
+       SmithingTransformRecipeJsonBuilder.create(Ingredient.EMPTY, Ingredient.ofItems(input), Ingredient.ofItems(addition), RecipeCategory.COMBAT, output)
+               .criterion("has_netherite_armor", conditionsFromItem(input)).offerTo(exporter, getItemPath(output) + "_smithing");
     }
 
 

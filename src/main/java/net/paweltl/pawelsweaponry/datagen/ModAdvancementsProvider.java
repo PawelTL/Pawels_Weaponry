@@ -147,7 +147,21 @@ public class ModAdvancementsProvider extends FabricAdvancementProvider {
                 .criterion("netherite_battleaxe", InventoryChangedCriterion.Conditions.items(ModItems.NETHERITE_BATTLEAXE))
                 .build(consumer, PawelsWeaponry.MOD_ID + "/netherite_battleaxe");
 
-        Advancement weaponMasterAdvancement = Advancement.Builder.create().parent(netheriteDualBladeAdvancement).parent(netheriteDaggerAdvancement)
+        Advancement heavyCrossbowAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                .display(
+                        ModItems.HEAVY_CROSSBOW,
+                        Text.literal("The Sniper"),
+                        Text.literal("Obtain a Heavy Crossbow"),
+                        null,
+                        AdvancementFrame.TASK,
+                        true,
+                        false,
+                        false
+                )
+                .criterion("heavy_crossbow", InventoryChangedCriterion.Conditions.items(ModItems.HEAVY_CROSSBOW))
+                .build(consumer, PawelsWeaponry.MOD_ID + "/heavy_crossbow");
+
+        Advancement weaponMasterAdvancement = Advancement.Builder.create().parent(netheriteHammerAdvancement)
                 .display(
                         Items.DRAGON_HEAD,
                         Text.literal("The Weapon Master"),
@@ -158,7 +172,7 @@ public class ModAdvancementsProvider extends FabricAdvancementProvider {
                         true,
                         true
                 )
-                .criterion("weapon_master", InventoryChangedCriterion.Conditions.items(ModItems.NETHERITE_BATTLEAXE, ModItems.NETHERITE_DUAL_BLADE, ModItems.NETHERITE_DAGGER, ModItems.NETHERITE_CLEAVER, ModItems.NETHERITE_LONGSWORD, ModItems.NETHERITE_HAMMER, ModItems.NETHERITE_KATANA, ModItems.NETHERITE_SPEAR))
+                .criterion("weapon_master", InventoryChangedCriterion.Conditions.items(ModItems.HEAVY_CROSSBOW ,ModItems.NETHERITE_BATTLEAXE, ModItems.NETHERITE_DUAL_BLADE, ModItems.NETHERITE_DAGGER, ModItems.NETHERITE_CLEAVER, ModItems.NETHERITE_LONGSWORD, ModItems.NETHERITE_HAMMER, ModItems.NETHERITE_KATANA, ModItems.NETHERITE_SPEAR))
                 .build(consumer, PawelsWeaponry.MOD_ID + "/weapon_master");
 
 

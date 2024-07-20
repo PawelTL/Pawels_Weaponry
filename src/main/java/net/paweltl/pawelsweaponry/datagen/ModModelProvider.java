@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import net.paweltl.pawelsweaponry.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -35,6 +36,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.IRON_DAGGER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.DIAMOND_DAGGER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.NETHERITE_DAGGER, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.JUGGERNAUT_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.JUGGERNAUT_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.JUGGERNAUT_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.JUGGERNAUT_BOOTS);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BERSERKER_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BERSERKER_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BERSERKER_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BERSERKER_BOOTS);
 
 
     }

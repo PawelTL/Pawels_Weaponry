@@ -1,7 +1,5 @@
 package net.paweltl.pawelsweaponry.item.custom;
 
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.ItemStack;
@@ -18,7 +16,7 @@ public class HeavyCrossbowItem extends CrossbowItem implements Vanishable {
     }
 
     private static float getSpeed(ItemStack stack) {
-        return hasProjectile(stack, Items.FIREWORK_ROCKET) ? 2.4F : 4.5F;
+        return hasProjectile(stack, Items.FIREWORK_ROCKET) ? 2.4F : 4.3F;
     }
 
 
