@@ -142,6 +142,12 @@ public class ModItems {
     public static final Item TOWER_SHIELD = registerItem("tower_shield",
             new TowerShieldItem(new FabricItemSettings().maxCount(1).maxDamage(600)));
 
+    public static final Item BUCKLER = registerItem("buckler",
+            new BucklerItem(new FabricItemSettings().maxCount(1).maxDamage(400)));
+
+    public static final Item WHIP = registerItem("whip",
+            new WhipItem(ToolMaterials.WOOD, 2, -3, new FabricItemSettings().maxCount(1)));
+
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
 

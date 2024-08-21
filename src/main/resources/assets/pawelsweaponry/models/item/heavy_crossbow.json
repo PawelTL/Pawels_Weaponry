@@ -49,7 +49,7 @@
     {
       "predicate": {
         "pulling": 1,
-        "pull": 0.95
+        "pull": 1
       },
       "model": "pawelsweaponry:item/heavy_crossbow_pulling_2"
     },

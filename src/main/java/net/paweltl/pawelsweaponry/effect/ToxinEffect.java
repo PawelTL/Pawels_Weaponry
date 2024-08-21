@@ -19,7 +19,7 @@ public class ToxinEffect extends StatusEffect {
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (amplifier > 3) {
             entity.damage(PawelsWeaponry.of(entity.getWorld(), PawelsWeaponry.TOXIN_DAMAGE_TYPE), (float) Math.ceil(amplifier * 0.15));
-        };
+        }
         super.applyUpdateEffect(entity, amplifier);
     }
 }

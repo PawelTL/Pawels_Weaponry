@@ -9,6 +9,7 @@ import net.paweltl.pawelsweaponry.PawelsWeaponry;
 import net.paweltl.pawelsweaponry.item.custom.DaggerItem;
 import net.paweltl.pawelsweaponry.item.custom.HeavyCrossbowItem;
 import net.paweltl.pawelsweaponry.item.custom.SpearItem;
+import net.paweltl.pawelsweaponry.item.custom.WhipItem;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -23,6 +24,9 @@ public class EnchantmentMixin {
     @Inject(method = "isAcceptableItem", at = @At("HEAD"), cancellable = true)
     private void isAcceptableItemMixin(ItemStack stack, CallbackInfoReturnable<Boolean> info) {
         if ((Object) this == Enchantments.SWEEPING && stack.getItem() instanceof SpearItem) {
+            info.setReturnValue(false);
+        }
+        if (((Object) this == Enchantments.SWEEPING || (Object) this == Enchantments.KNOCKBACK) && stack.getItem() instanceof WhipItem) {
             info.setReturnValue(false);
         }
         if ((Object) this == PawelsWeaponry.TOXIC && stack.getItem() instanceof DaggerItem) {

@@ -13,6 +13,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import net.paweltl.pawelsweaponry.effect.IncapacitateEffect;
@@ -21,6 +22,7 @@ import net.paweltl.pawelsweaponry.effect.WoundedEffect;
 import net.paweltl.pawelsweaponry.enchantment.ToxicEnchantment;
 import net.paweltl.pawelsweaponry.item.ModItemGroups;
 import net.paweltl.pawelsweaponry.item.ModItems;
+import net.paweltl.pawelsweaponry.sound.ModSounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,6 +40,7 @@ public class PawelsWeaponry implements ModInitializer {
 		return new DamageSource(world.getRegistryManager().get(RegistryKeys.DAMAGE_TYPE).entryOf(key));
 	}
 
+
 	public static Enchantment TOXIC = new ToxicEnchantment();
 
 	@Override
@@ -51,6 +54,8 @@ public class PawelsWeaponry implements ModInitializer {
 		Registry.register(Registries.STATUS_EFFECT, new Identifier(PawelsWeaponry.MOD_ID, "toxin"), TOXIN);
 
 		Registry.register(Registries.ENCHANTMENT, new Identifier("pawelsweaponry", "toxic"), TOXIC);
+
+		ModSounds.registerSounds();
 
 
 

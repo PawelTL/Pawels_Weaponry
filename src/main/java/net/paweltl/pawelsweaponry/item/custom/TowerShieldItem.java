@@ -16,7 +16,8 @@ public class TowerShieldItem extends ShieldItem {
         super(settings);
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(EntityAttributes.GENERIC_ARMOR, new EntityAttributeModifier("Weapon modifier", 4.0, EntityAttributeModifier.Operation.ADDITION));
-        builder.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier("Weapon modifier", -0.3, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+        builder.put(EntityAttributes.GENERIC_MOVEMENT_SPEED, new EntityAttributeModifier("Weapon modifier", -0.15, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
+        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier("Weapon modifier", -0.15, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
         this.attributeModifiers = builder.build();
     }
 

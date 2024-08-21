@@ -37,6 +37,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DIAMOND_DAGGER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.NETHERITE_DAGGER, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.WHIP, Models.HANDHELD);
+
         itemModelGenerator.registerArmor((ArmorItem) ModItems.JUGGERNAUT_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.JUGGERNAUT_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.JUGGERNAUT_LEGGINGS);

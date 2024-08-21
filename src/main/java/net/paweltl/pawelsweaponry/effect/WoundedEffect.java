@@ -16,12 +16,7 @@ public class WoundedEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        if (entity.hasStatusEffect(StatusEffects.ABSORPTION)) {entity.removeStatusEffect(StatusEffects.ABSORPTION);}
-        if (entity instanceof PlayerEntity) {
-            if (((PlayerEntity) entity).getHungerManager().getSaturationLevel() > 2) {
-                ((PlayerEntity) entity).getHungerManager().setSaturationLevel(2);
-            }
-        }
+        if (entity.getAbsorptionAmount() > 2) {entity.setAbsorptionAmount(2);}
         super.applyUpdateEffect(entity, amplifier);
     }
 }

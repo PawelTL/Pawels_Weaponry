@@ -14,7 +14,8 @@
     "ItemRendererAccessor",
     "ItemRendererMixin",
     "MinecraftClientMixin",
-    "ModelLoaderMixin"
+    "ModelLoaderMixin",
+    "PlayerEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -3,13 +3,13 @@
 	"id": "pawelsweaponry",
 	"version": "${version}",
 	"name": "Pawel's Weaponry",
-	"description": "This is a vanilla+ weapons mod",
+	"description": "This is a vanilla+ equipment mod",
 	"authors": [
 		"PawelTL"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/pawels-weaponry",
+		"sources": "https://github.com/PawelTL/Pawels_Weaponry"
 	},
 	"license": "MIT",
 	"icon": "assets/pawelsweaponry/textures/item/netherite_battleaxe.png",

@@ -13,6 +13,7 @@ public class ModModelPredicateProvider {
     public static void registerModModels() {
         registerNewCrossbow(ModItems.HEAVY_CROSSBOW);
         registerNewShield(ModItems.TOWER_SHIELD);
+        registerNewShield(ModItems.BUCKLER);
     }
 
     private static void registerNewCrossbow(Item crossbow) {

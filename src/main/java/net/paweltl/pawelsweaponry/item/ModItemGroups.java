@@ -85,6 +85,9 @@ public class ModItemGroups {
                         entries.add(ModItems.HEAVY_CROSSBOW);
 
                         entries.add(ModItems.TOWER_SHIELD);
+                        entries.add(ModItems.BUCKLER);
+
+                        entries.add(ModItems.WHIP);
 
 
 

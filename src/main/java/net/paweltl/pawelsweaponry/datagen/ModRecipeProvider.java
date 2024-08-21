@@ -93,6 +93,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT), FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.TOWER_SHIELD)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.BUCKLER)
+                .pattern(" i ")
+                .pattern("ixi")
+                .pattern(" i ")
+                .input('x', ItemTags.PLANKS)
+                .input('i', Items.IRON_INGOT)
+                .criterion(FabricRecipeProvider.hasItem(Items.IRON_INGOT), FabricRecipeProvider.conditionsFromItem(Items.IRON_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.BUCKLER)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.WHIP)
+                .pattern(" l ")
+                .pattern("l l")
+                .pattern("sl ")
+                .input('s', Items.STICK)
+                .input('l', Items.LEATHER)
+                .criterion(FabricRecipeProvider.hasItem(Items.LEATHER), FabricRecipeProvider.conditionsFromItem(Items.LEATHER))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK), FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.WHIP)));
+
         armor(Items.NETHERITE_HELMET, ModItems.JUGGERNAUT_HELMET, Items.IRON_BLOCK, exporter);
         armor(Items.NETHERITE_CHESTPLATE, ModItems.JUGGERNAUT_CHESTPLATE, Items.IRON_BLOCK, exporter);
         armor(Items.NETHERITE_LEGGINGS, ModItems.JUGGERNAUT_LEGGINGS, Items.IRON_BLOCK, exporter);

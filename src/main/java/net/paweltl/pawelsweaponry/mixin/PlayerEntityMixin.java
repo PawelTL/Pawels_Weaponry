@@ -49,7 +49,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
 
     @Inject(method = "damageShield", at = @At(value = "HEAD"), cancellable = true)
     private void damageShieldMixin(float amount, CallbackInfo ci) {
-        if (this.activeItemStack.isOf(ModItems.TOWER_SHIELD)) {
+        if (this.activeItemStack.isOf(ModItems.TOWER_SHIELD) || this.activeItemStack.isOf(ModItems.BUCKLER)) {
             if (!this.getWorld().isClient) {
                 this.incrementStat(Stats.USED.getOrCreateStat(this.activeItemStack.getItem()));
             }
@@ -91,4 +91,11 @@ public abstract class PlayerEntityMixin extends LivingEntity {
             ci.cancel();
         }
     }
+
+//    @Inject(method = "takeShieldHit", at = @At(value = "TAIL"), cancellable = true)
+//    private void disableBucklerMixin(LivingEntity attacker, CallbackInfo ci) {
+//        if (this.getActiveItem().getItem() instanceof BucklerItem) {
+//            this.getItemCooldownManager().set(this.getActiveItem().getItem(), 10);
+//        }
+//    }
 }
