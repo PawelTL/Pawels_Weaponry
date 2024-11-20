@@ -19,6 +19,7 @@ import net.minecraft.world.World;
 import net.paweltl.pawelsweaponry.effect.IncapacitateEffect;
 import net.paweltl.pawelsweaponry.effect.ToxinEffect;
 import net.paweltl.pawelsweaponry.effect.WoundedEffect;
+import net.paweltl.pawelsweaponry.enchantment.CounterEnchantment;
 import net.paweltl.pawelsweaponry.enchantment.ToxicEnchantment;
 import net.paweltl.pawelsweaponry.item.ModItemGroups;
 import net.paweltl.pawelsweaponry.item.ModItems;
@@ -42,6 +43,7 @@ public class PawelsWeaponry implements ModInitializer {
 
 
 	public static Enchantment TOXIC = new ToxicEnchantment();
+	public static Enchantment COUNTER = new CounterEnchantment();
 
 	@Override
 	public void onInitialize() {
@@ -54,6 +56,7 @@ public class PawelsWeaponry implements ModInitializer {
 		Registry.register(Registries.STATUS_EFFECT, new Identifier(PawelsWeaponry.MOD_ID, "toxin"), TOXIN);
 
 		Registry.register(Registries.ENCHANTMENT, new Identifier("pawelsweaponry", "toxic"), TOXIC);
+		Registry.register(Registries.ENCHANTMENT, new Identifier("pawelsweaponry", "counter"), COUNTER);
 
 		ModSounds.registerSounds();
 

@@ -82,9 +82,10 @@
   "death.attack.custom": "%1$s succumbed to toxin.",
 
   "enchantment.pawelsweaponry.toxic": "Toxic",
+  "enchantment.pawelsweaponry.counter": "Counter",
 
  "tooltip.tutorialmod.battleaxe.tooltip": "Has more powerful critical strikes.",
- "tooltip.tutorialmod.cleaver.tooltip": "Applies an effect that reduces healing from food.",
+ "tooltip.tutorialmod.cleaver.tooltip": "Applies an effect that halves healing.",
  "tooltip.tutorialmod.dagger.tooltip": "Has a unique enchant that applies toxin on hit.",
  "tooltip.tutorialmod.dual_blade.tooltip": "Significantly stronger when used in pairs.",
  "tooltip.tutorialmod.hammer.tooltip": "Hold right click to charge up a slam.",

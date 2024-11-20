@@ -12,6 +12,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.Vanishable;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
@@ -23,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class LongSwordItem extends SwordItem {
+public class LongSwordItem extends SwordItem implements Vanishable {
 
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;

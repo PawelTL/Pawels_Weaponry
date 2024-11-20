@@ -5,11 +5,9 @@ import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.FishingRodItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ShieldItem;
 import net.paweltl.pawelsweaponry.PawelsWeaponry;
-import net.paweltl.pawelsweaponry.item.custom.DaggerItem;
-import net.paweltl.pawelsweaponry.item.custom.HeavyCrossbowItem;
-import net.paweltl.pawelsweaponry.item.custom.SpearItem;
-import net.paweltl.pawelsweaponry.item.custom.WhipItem;
+import net.paweltl.pawelsweaponry.item.custom.*;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -29,14 +27,17 @@ public class EnchantmentMixin {
         if (((Object) this == Enchantments.SWEEPING || (Object) this == Enchantments.KNOCKBACK) && stack.getItem() instanceof WhipItem) {
             info.setReturnValue(false);
         }
-        if ((Object) this == PawelsWeaponry.TOXIC && stack.getItem() instanceof DaggerItem) {
-            info.setReturnValue(true);
+        if ((Object) this == PawelsWeaponry.TOXIC && !(stack.getItem() instanceof DaggerItem)) {
+            info.setReturnValue(false);
         }
-        if ((Object) this == PawelsWeaponry.TOXIC && stack.getItem() instanceof FishingRodItem) {
+        if (((Object) this == PawelsWeaponry.TOXIC || (Object) this == PawelsWeaponry.COUNTER) && stack.getItem() instanceof FishingRodItem) {
             info.setReturnValue(false);
         }
         if ((Object) this == Enchantments.POWER && stack.getItem() instanceof HeavyCrossbowItem) {
             info.setReturnValue(true);
+        }
+        if ((Object) this == PawelsWeaponry.COUNTER && !(stack.getItem() instanceof ShieldItem || stack.getItem() instanceof TowerShieldItem || stack.getItem() instanceof BucklerItem)) {
+            info.setReturnValue(false);
         }
     }
 }

@@ -104,7 +104,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.WHIP)
                 .pattern(" l ")
-                .pattern("l l")
+                .pattern("lll")
                 .pattern("sl ")
                 .input('s', Items.STICK)
                 .input('l', Items.LEATHER)

@@ -7,8 +7,9 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ShieldItem;
+import net.minecraft.item.Vanishable;
 
-public class TowerShieldItem extends ShieldItem {
+public class TowerShieldItem extends ShieldItem implements Vanishable {
 
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 

@@ -8,10 +8,11 @@ import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.Vanishable;
 import net.paweltl.pawelsweaponry.item.ModItems;
 
 
-public class JuggernautArmorItem extends ArmorItem {
+public class JuggernautArmorItem extends ArmorItem implements Vanishable {
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
 

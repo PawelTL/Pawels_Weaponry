@@ -3,9 +3,11 @@ package net.paweltl.pawelsweaponry.mixin;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.ItemCooldownManager;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -15,6 +17,7 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.paweltl.pawelsweaponry.PawelsWeaponry;
 import net.paweltl.pawelsweaponry.item.ModItems;
 import net.paweltl.pawelsweaponry.item.custom.SpearItem;
 import org.objectweb.asm.Opcodes;
@@ -29,6 +32,8 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     @Shadow public abstract void incrementStat(Stat<?> stat);
 
     @Shadow public abstract ItemCooldownManager getItemCooldownManager();
+
+    @Shadow public abstract void attack(Entity target);
 
     protected PlayerEntityMixin(EntityType<? extends LivingEntity> entityType, World world) {
         super(entityType, world);
@@ -92,10 +97,11 @@ public abstract class PlayerEntityMixin extends LivingEntity {
         }
     }
 
-//    @Inject(method = "takeShieldHit", at = @At(value = "TAIL"), cancellable = true)
-//    private void disableBucklerMixin(LivingEntity attacker, CallbackInfo ci) {
-//        if (this.getActiveItem().getItem() instanceof BucklerItem) {
-//            this.getItemCooldownManager().set(this.getActiveItem().getItem(), 10);
-//        }
-//    }
+    @Inject(method = "takeShieldHit", at = @At(value = "HEAD"))
+    private void takeShieldHitMixin(LivingEntity attacker, CallbackInfo ci) {
+        if (this.isBlocking() && EnchantmentHelper.getLevel(PawelsWeaponry.COUNTER, this.getActiveItem()) > 0 && this.getItemUseTime() < 10){
+            attacker.addStatusEffect(new StatusEffectInstance(PawelsWeaponry.INCAPACITATED, 20, 0), this);
+        }
+    }
+
 }

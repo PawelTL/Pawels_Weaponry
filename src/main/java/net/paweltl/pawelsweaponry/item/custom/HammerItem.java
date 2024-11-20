@@ -49,7 +49,7 @@ public class HammerItem extends SwordItem implements Vanishable{
 
     @Override
     public int getMaxUseTime(ItemStack stack) {
-        return 50;
+        return 40;
     }
 
 

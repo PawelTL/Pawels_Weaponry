@@ -10,7 +10,7 @@ import net.paweltl.pawelsweaponry.PawelsWeaponry;
 
 public class ToxicEnchantment extends Enchantment {
     public ToxicEnchantment() {
-        super(Rarity.RARE, EnchantmentTarget.FISHING_ROD, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
+        super(Rarity.UNCOMMON, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
     }
 
 

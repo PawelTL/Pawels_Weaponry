@@ -16,6 +16,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.Vanishable;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -32,7 +33,7 @@ import net.paweltl.pawelsweaponry.PawelsWeaponry;
 import net.paweltl.pawelsweaponry.init.CompatInit;
 import net.paweltl.pawelsweaponry.sound.ModSounds;
 
-public class WhipItem extends SwordItem {
+public class WhipItem extends SwordItem implements Vanishable {
 
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;

@@ -9,9 +9,10 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.Vanishable;
 import net.paweltl.pawelsweaponry.item.ModItems;
 
-public class BerserkerArmorItem extends ArmorItem{
+public class BerserkerArmorItem extends ArmorItem implements Vanishable {
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
 

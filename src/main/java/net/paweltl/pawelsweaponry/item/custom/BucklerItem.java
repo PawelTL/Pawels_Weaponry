@@ -4,9 +4,10 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShieldItem;
+import net.minecraft.item.Vanishable;
 import net.minecraft.world.World;
 
-public class BucklerItem extends ShieldItem {
+public class BucklerItem extends ShieldItem implements Vanishable {
     public BucklerItem(Settings settings) {
         super(settings);
     }

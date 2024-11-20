@@ -14,6 +14,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.Vanishable;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
@@ -23,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class CleaverItem extends SwordItem {
+public class CleaverItem extends SwordItem implements Vanishable {
 
 
     private final float attackDamage;
