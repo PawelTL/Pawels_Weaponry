@@ -67,6 +67,12 @@ public class HammerItem extends SwordItem implements Vanishable{
     }
 
     @Override
+    public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
+        ((PlayerEntity)user).getItemCooldownManager().set(this, 140);
+        super.onStoppedUsing(stack, world, user, remainingUseTicks);
+    }
+
+    @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         ((PlayerEntity)user).getItemCooldownManager().set(this, 220);
         for (int i = 0; i <=360; i+=6) {

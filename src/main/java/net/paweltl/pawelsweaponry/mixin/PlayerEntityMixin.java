@@ -93,6 +93,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
             if (this.random.nextFloat() < f) {
                 this.getItemCooldownManager().set(ModItems.TOWER_SHIELD, 160);
             }
+            stopUsingItem();
             ci.cancel();
         }
     }

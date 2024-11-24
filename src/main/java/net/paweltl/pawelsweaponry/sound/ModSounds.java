@@ -8,6 +8,7 @@ import net.paweltl.pawelsweaponry.PawelsWeaponry;
 
 public class ModSounds {
     public static final SoundEvent WHIP_CRACK = registerSoundEvent("whip_crack");
+    public static final SoundEvent KATANA_SLASH = registerSoundEvent("katana_slash");
 
 
     private static SoundEvent registerSoundEvent(String name) {

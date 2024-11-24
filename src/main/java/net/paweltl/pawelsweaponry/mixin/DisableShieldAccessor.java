@@ -26,7 +26,7 @@ public abstract class DisableShieldAccessor extends Entity
     @Inject(method = "disablesShield", at = @At("HEAD"), cancellable = true)
     private void disableShieldAccessor$onDisablesShield(CallbackInfoReturnable<Boolean> cir)
     {
-        if (this.getMainHandStack().getItem() instanceof HammerItem && this.getMainHandStack().getItem() instanceof LongSwordItem)
+        if (this.getMainHandStack().getItem() instanceof HammerItem || this.getMainHandStack().getItem() instanceof LongSwordItem)
         {
             cir.setReturnValue(true);
         }

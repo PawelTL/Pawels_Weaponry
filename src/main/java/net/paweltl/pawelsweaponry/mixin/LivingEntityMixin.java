@@ -12,6 +12,7 @@ import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.paweltl.pawelsweaponry.PawelsWeaponry;
 import net.paweltl.pawelsweaponry.item.custom.BucklerItem;
@@ -86,6 +87,7 @@ public abstract class LivingEntityMixin extends Entity {
     public LivingEntityMixin(EntityType<?> type, World world) {
         super(type, world);
     }
+
 
     @Inject(method = "blockedByShield", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/Vec3d;dotProduct(Lnet/minecraft/util/math/Vec3d;)D", shift = At.Shift.AFTER), cancellable = true)
     private void blockedByShieldMixin(DamageSource source, CallbackInfoReturnable<Boolean> info) {

@@ -97,6 +97,7 @@
   "tooltip.tutorialmod.two_handed.tooltip": "Two-Handed",
   "tooltip.tutorialmod.dual_wielding.tooltip": "Dual-Wielding",
   "sounds.pawelsweaponry.whip_crack": "Whip crack",
+  "sounds.pawelsweaponry.katana_slash": "Katana slash",
 
   "itemgroup.netherite_battleaxe": "Pawel's Weaponry"
 }

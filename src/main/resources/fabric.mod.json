@@ -28,6 +28,7 @@
 	"mixins": [
 		"pawelsweaponry.mixins.json"
 	],
+	"accessWidener": "pawelsweaponry.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.20.1",

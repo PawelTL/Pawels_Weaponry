@@ -4,6 +4,12 @@
     "sounds": [
       "pawelsweaponry:whip_crack"
     ]
+  },
+  "katana_slash": {
+    "subtitle": "sounds.pawelsweaponry.katana_slash",
+    "sounds": [
+      "pawelsweaponry:katana_slash"
+    ]
   }
 }
 

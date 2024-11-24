@@ -6,12 +6,14 @@
     "CrossbowItemMixin",
     "DisableShieldAccessor",
     "EnchantmentMixin",
+    "EntityInvoker",
     "LivingEntityMixin",
     "PlayerEntityMixin",
     "ShieldItemMixin"
   ],
   "client": [
     "BipedEntityModelMixin",
+    "InGameHudMixin",
     "ItemRendererAccessor",
     "ItemRendererMixin",
     "MinecraftClientMixin",
